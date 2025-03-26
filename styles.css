@@ -43,9 +43,10 @@
     --grey: #7A7A7A;
 }
 
+
 /*----Typography----*/
 
-h1, h2, h3, h4, h5, h6 {
+h1, h3, h4, h5, h6 {
     font-family: "Merriweather", serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -53,13 +54,96 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-p {
+h2, nav, p, footer, label, button {
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
     font-variation-settings: "wdth" 100;
 }
 
+a, a:visited, a:hover {
+    color: var(--lightgrey);
+    text-decoration: none;
+}
+/*----Layout----*/
+
+/*----Re-usables----*/
+section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+div {
+    display: flex;
+    flex-direction: column;
+}
+article {
+
+}
 
 
 
+/*----Areas----*/
+
+/*----Header----*/
+
+.header {
+    background: linear-gradient(90deg, var(--blue) 0%, var(--purple) 100%);
+    color: var(--lightgrey);
+}
+.header div {
+    width: 100%;
+    align-items: center;
+    position: relative;
+}
+
+nav {
+    align-self: end;
+    display: flex;
+    justify-content: end;
+    gap: 90px;
+    padding: 0 60px;
+    margin: 50px 20px;
+    background-color: transparent;
+    color: var(--lightgrey);
+    font-size: 35px;
+
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 1400px;
+}
+
+header h1 {
+    font-size: 85px;
+    margin: 1.5em 0 3rem 0;
+}
+
+header h2 {
+    font-size: 45px;
+    font-weight: 350;
+}
+
+header button {
+    margin: 60px 0 420px 0;
+    width: 450px;
+    align-self: center;
+    background-color: var(--pink);
+    border: 0;
+    border-radius: 700px;
+    padding: 40px;
+    font-size: 25px;
+    letter-spacing: 2px;
+    color: var(--lightgrey);
+}
+
+.header img {
+    bottom: -50px;
+    position: absolute;
+    width: 130px;
+}

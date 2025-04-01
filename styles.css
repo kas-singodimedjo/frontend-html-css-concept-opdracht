@@ -46,7 +46,7 @@
 
 /*----Typography----*/
 
-h1, h3, h4, h5, h6 {
+h1, h3, h4, h6 {
     font-family: "Merriweather", serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -54,7 +54,7 @@ h1, h3, h4, h5, h6 {
 }
 
 
-h2, nav, p, footer, label, button {
+h2, h5, nav, p, footer, label, button {
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -72,30 +72,36 @@ section {
     display: flex;
     flex-direction: row;
     justify-content: center;
-
 }
 div {
     display: flex;
     flex-direction: column;
 }
-article {
-
-}
-
 
 
 /*----Areas----*/
 
 /*----Header----*/
 
-.header {
+header {
     background: linear-gradient(90deg, var(--blue) 0%, var(--purple) 100%);
     color: var(--lightgrey);
-}
-.header div {
     width: 100%;
-    align-items: center;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+header div {
+    align-items: center;
+    }
+.image-container {
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    /*background-image: url('../assets/squiggle_line_stripe.svg');*/
+    flex-basis: 150px;
 }
 
 nav {
@@ -109,14 +115,6 @@ nav {
     color: var(--lightgrey);
     font-size: 35px;
 
-}
-
-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    width: 1400px;
 }
 
 header h1 {
@@ -142,8 +140,122 @@ header button {
     color: var(--lightgrey);
 }
 
-.header img {
-    bottom: -50px;
-    position: absolute;
-    width: 130px;
+
+/*----Introduction----*/
+
+.hello {
+    font-size: 37px;
+    text-align: center;
+    margin: 170px 20px;
+
+}
+
+.hello h1 {
+    padding: 20px 0;
+    line-height: 80px;
+    color: var(--blue);
+}
+
+.hello h5 {
+    margin-top: 175px;
+    font-weight: 400;
+    font-size: 35px;
+}
+.hello a {
+    color: var(--purple);
+}
+
+/*----Case Studies----*/
+
+.casestudies {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--lightgrey);
+    justify-content: center;
+    align-items: center;
+}
+
+.rollingstones {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 150px;
+    font-size: 45px;
+}
+
+.variety {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 150px;
+    font-size: 45px;
+}
+
+.worth {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 150px;
+    font-size: 45px;
+}
+.casestudies-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 800px;
+    flex-basis: 1000px;
+    padding: 100px;
+}
+.image-wrapper{
+    flex-basis: 1600px;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+.image-wrapper img {
+    width: 100%;
+}
+.squigle {
+    width:150px;
+}
+
+/*---Articles---*/
+
+.articles {
+
+    width: 2400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    font-size: 40px;
+    gap: 10px;
+    margin: 150px;
+}
+
+
+article {
+    flex-basis: 750px;
+    padding: 50px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    border: 1px solid grey;
+}
+
+article img {
+    height: 200px
+}
+
+/*---Contact---*/
+
+.contact-us {
+    background: linear-gradient(90deg, var(--blue) 0%, var(--purple) 100%);
+    color: var(--lightgrey);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }

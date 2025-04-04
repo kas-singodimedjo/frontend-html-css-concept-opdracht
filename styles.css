@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*////////////////////////
+    Table of Contents
+    1. Global Styles
+    2. Typography
+    3. Layout
+        3.1 Reusables
+        3.2 Other
+    4. Areas
+        4.1 Header
+        4.2 Introduction
+        etc.
+    5. Media Queries
+////////////////////////*/
+
+/*Paars #5722CD;*/
+/*Blauw #4845E4;*/
+/*Roze #ED4385;*/
+/*Zwart #0C0C0C (voor standaard tekst);*/
+/*Lichtpaars #F2F0FF (voor de grote zwevende woorden, zoals "hello" en "services") */
+/*Uitzonderingen:*/
+/*                                                                                 */
+/*Lichtgrijs #F3F6F9 (voor de achtergrond van de projecten)*/
+/*Grijs #7A7A7A (voor de service-tegel tekst);*/
+
+/*----Global Styles----*/
+
+/*CSS-reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --purple: #5722CD;
+    --blue: #4845E4;
+    --pink: #ED4385;
+    --black: #0C0C0C;
+    --lightpink: #F2F0FF;
+    --lightgrey: #F3F6F9;
+    --grey: #7A7A7A;
+}
+
+
+/*----Typography----*/
+
+h1, h3, h4, h6 {
+    font-family: "Merriweather", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+
+h2, h5, nav, p, footer, label, button, textarea {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+a, a:visited, a:hover {
+    color: var(--lightgrey);
+    text-decoration: none;
+}
+/*----Layout----*/
+
+/*----Re-usables----*/
+section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+div {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*----Areas----*/
+
+/*----Header----*/
+
+header {
+    background: linear-gradient(90deg, var(--blue) 0%, var(--purple) 100%);
+    color: var(--lightgrey);
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+header div {
+    align-items: center;
+    }
+.image-container {
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    /*background-image: url('../assets/squiggle_line_stripe.svg');*/
+    flex-basis: 150px;
+}
+
+nav {
+    align-self: end;
+    display: flex;
+    justify-content: end;
+    gap: 90px;
+    padding: 0 60px;
+    margin: 50px 20px;
+    background-color: transparent;
+    color: var(--lightgrey);
+    font-size: 35px;
+
+}
+
+header h1 {
+    font-size: 85px;
+    margin: 1.5em 0 3rem 0;
+}
+
+header h2 {
+    font-size: 45px;
+    font-weight: 350;
+}
+
+header button {
+    margin: 60px 0 420px 0;
+    width: 450px;
+    align-self: center;
+    background-color: var(--pink);
+    border: 0;
+    border-radius: 700px;
+    padding: 40px;
+    font-size: 25px;
+    letter-spacing: 2px;
+    color: var(--lightgrey);
+}
+
+
+/*----Introduction----*/
+
+.hello {
+    font-size: 37px;
+    text-align: center;
+    margin: 170px 20px;
+
+}
+
+.hello h1 {
+    padding: 20px 0;
+    line-height: 80px;
+    color: var(--blue);
+}
+
+.hello h5 {
+    margin-top: 175px;
+    font-weight: 400;
+    font-size: 35px;
+}
+.hello a {
+    color: var(--purple);
+}
+
+/*----Case Studies----*/
+
+.casestudies {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--lightgrey);
+    justify-content: center;
+    align-items: center;
+}
+
+.rollingstones {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 150px;
+    font-size: 45px;
+}
+
+.variety {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 150px;
+    font-size: 45px;
+}
+
+.worth {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 150px;
+    font-size: 45px;
+}
+.casestudies-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 800px;
+    flex-basis: 1000px;
+    padding: 100px;
+}
+.image-wrapper{
+    flex-basis: 1600px;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+.image-wrapper img {
+    width: 100%;
+}
+.squigle {
+    width:150px;
+}
+
+/*---Articles---*/
+
+.articles {
+
+    flex-basis: 2000px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 25px;
+    gap: 50px;
+    margin: 150px;
+
+}
+
+
+article {
+    width: 600px;
+    height: 600px;
+    padding: 50px;
+    border: 1px solid grey;
+    box-shadow: -5px 5px 10px var(--lightgrey);
+}
+article h3 {
+    font-size: 30px;
+    color: var(--purple);
+    padding: 20px 0;
+}
+article img {
+    height: 100px;
+}
+
+/*---Contact---*/
+
+.contact-us {
+    background: linear-gradient(90deg, var(--blue) 0%, var(--purple) 100%);
+    color: var(--lightgrey);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.contact-div {
+    padding-top: 50px;
+    font-size: 30px;
+}
+
+.contact-div h6 {
+    padding: 30px 0 10px 0;
+    font-weight: 100;
+}
+
+.form-div {
+    margin-bottom: 50px;
+    width: 1000px;
+    padding: 20px;
+    border: 3px solid var(--lightgrey);
+    text-align: left;
+    height: auto;
+}
+.form-div button {
+    width: 200px;
+    align-self: center;
+    background-color: var(--pink);
+    border: 0;
+    border-radius: 200px;
+    padding: 15px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: var(--lightgrey);
+}
+
+form input {
+    display: block;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+form textarea {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+    padding: 20px;
+
+}
+form label {
+    display: block;
+}
+
+/*----Footer----*/
+
+footer {
+    text-align: center;
+    color: var(--lightgrey);
+    background-color: var(--black);
+    padding: 20px 0;
+}
